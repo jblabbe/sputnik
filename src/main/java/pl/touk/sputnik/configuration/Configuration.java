@@ -48,4 +48,8 @@ public class Configuration {
         }
     }
 
+    public int getConfigSize() {
+        return properties.size();
+    }
+
 }
