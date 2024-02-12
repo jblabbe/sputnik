@@ -12,8 +12,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  build-and test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
