@@ -67,5 +67,13 @@ class ConfigurationBuilderTest {
         return commandLineMock;
     }
 
+    @Test
+    void shouldReturnRightSize() {
+        System.setProperty("some.system.property", "1234");
+        System.setProperty("some.system.property2", "5678");
+        Configuration config = ConfigurationBuilder.initFromResource("sample-test.properties");
+
+        assertThat(config.getConfigSize()).isEqualTo(2);
+    }
 
 }
